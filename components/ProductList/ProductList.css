@@ -1,0 +1,14 @@
+.ProductList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+  
+.ProductList > div {
+    border: black 2px solid;
+    display: flex ;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    margin: 1rem auto;
+}

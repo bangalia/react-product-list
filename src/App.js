@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import data, { uniqueCategories } from './data';
+import ProductList from './components/ProductList/ProductList';
+import CategoryList from './components/CategoryList/CategoryList';
+import Header from './components/Header/Header'
+import Inventory from './components/Inventory';
+import { useState } from 'react';
+
 
 function App() {
+  const [ category, setCategory ] = useState('Toys');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <Header 
+        title = "Productie"
+        productCount = {data.length} 
+        categoryCount={uniqueCategories.length}
+      />
+
+      <CategoryList 
+        category={category}
+        onClick={ newCategory => setCategory(newCategory) }
+      />
+
+      <ProductList 
+        category={category}
+      />
+
+      <Inventory />
+
     </div>
   );
 }

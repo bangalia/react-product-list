@@ -1,27 +1,16 @@
-import { catsAndCounts } from "../../data"
-import './CategoryList.css'
 
-function CategoryList(props) {
-  const { category, onClick } = props;
 
-  return (
-    <div className="CategoryList">
-      {catsAndCounts.map(obj => {
-        const {name, count} = obj
-        const className = name === category ? 'selected' : ''
-        
-        return (
-          <button 
-            className={className}
-            onClick = {() => onClick(name)}
-          >
-            {name}
-            <span> {count} </span>
-          </button>
-        )
-      })}
+function Product(props) {
+    const { name, description, price, category, rating} = props
+  
+    return (
+      <div className="Product">
+        <h2>{name}</h2>
+        <p>{description}</p>
+        <p>{price}</p>
+        <small>Category: {category} | Rating: {rating}</small>
       </div>
-  )
-}
-
-export default CategoryList
+    )
+  }
+  
+export default Product
