@@ -14,15 +14,15 @@
   
 .CategoryList > button:hover{
     cursor: pointer;
-    background-color: darkgray;
+    background-color: rgb(236, 196, 232);
 }
   
-button.selected {
+.button.selected {
     background-color: darkgray;
 }
   
 button > span {
-    background-color: #b986e9d3;
+    background-color: #600bafd3;
     display: inline-block;
     text-align: center;
     padding: 4px 6px;

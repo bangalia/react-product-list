@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       
       <Header 
-        title = "Productie"
+        title = "Chip's Cheap Bits"
         productCount = {data.length} 
         categoryCount={uniqueCategories.length}
       />

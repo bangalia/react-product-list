@@ -5,7 +5,7 @@
 }
   
 .ProductList > div {
-    border: black 2px solid;
+    border: rgb(105, 27, 139) 2px solid;
     display: flex ;
     flex-direction: column;
     text-align: center;
